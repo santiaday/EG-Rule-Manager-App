@@ -5,9 +5,8 @@
 
     <groupId>com.example</groupId>
     <artifactId>eg-rule-manager-app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-
+    <version>0.0.1</version>
     <name>eg-rule-manager-app</name>
     <description>EG Rule manager app</description>
 

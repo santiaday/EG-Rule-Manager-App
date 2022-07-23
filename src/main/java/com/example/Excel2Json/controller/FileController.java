@@ -898,7 +898,7 @@ public class FileController {
     public void EG_write_to_JSON(List<JsonObject> dataList, String name, String fileKey, int counter) {
         Gson gson = new Gson();
         try {
-            FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads" + System.getProperty("file.separator") + "%s.json",
+            FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "uploadedFiles" + System.getProperty("file.separator") + "%s.json",
                     multiple ? fileKey + "converted-" + name + "-" + counter : fileKey + "converted-" + name));
             file.write(gson.toJson(dataList));
             file.close();
@@ -917,7 +917,7 @@ public class FileController {
         try {
 
 
-            FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads" + System.getProperty("file.separator") + "%s.json",
+            FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "uploadedFiles" + System.getProperty("file.separator") + "%s.json",
                     multiple ? fileKey + "converted-" + name + "-" + counter : fileKey + "converted-" + name));
             file.write(gson.toJson(dataList));
             file.close();

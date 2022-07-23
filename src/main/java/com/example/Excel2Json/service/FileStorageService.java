@@ -25,7 +25,7 @@ public class FileStorageService {
 
     @Autowired
     public FileStorageService(FileStorageProperties fileStorageProperties) {
-        this.fileStorageLocation = Paths.get(System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads")
+        this.fileStorageLocation = Paths.get(System.getProperty("user.dir") + System.getProperty("file.separator") + "uploadedFiles")
                 .toAbsolutePath().normalize();
 
         try {
