@@ -166,7 +166,7 @@ Click on this process and click "End Task"
         
                 cd Documents/test
         
-        After pressing enter, you will be in the directory: Documents/test. To make sure it is the correct directory, type "ls" and make sure that one of the files             shown is the .jar file
+        After pressing enter, you will be in the directory: Documents/test. To make sure it is the correct directory, type "ls" and make sure that one of the files shown is the .jar file
 
 2. If you are in the correct directory, you can run this command to start the application:
 
@@ -192,7 +192,7 @@ If the location of the .jar file is corrupt or you don't have access to it, foll
 
 ###Prerequisites
 
-In order to create your own .jar file and follow along with these installation instructions, you must have Maven installed on your machine. Follow these steps to check if you have Maven installed. 
+In order to create your own .jar file and follow along with these installation instructions, you must have Maven installed on your machine. Follow these steps to check if you have Maven installed. You must also have Git installed on your machine. 
 
 #### Windows: 
 
@@ -208,6 +208,14 @@ In order to create your own .jar file and follow along with these installation i
 
 If no version is detected, you will have to install Maven before running the application. 
 
+4. Then, type in this command:
+
+        git --version
+
+5. Expected output: 
+
+
+
 #### MacOS: 
 
 1. Open a terminal (Ctrl+Spacebar and type "terminal" and press enter)
@@ -218,15 +226,76 @@ If no version is detected, you will have to install Maven before running the app
 
 3. Expected output:
 
+<img width="859" alt="Screen Shot 2022-07-23 at 1 34 47 PM" src="https://user-images.githubusercontent.com/74830912/180622415-5ad8b2c7-112a-40bb-af8b-841299ff6af4.png">
 
 
 If no version is detected, you will have to install Java before running the application. 
 
+4. Then, type in this command:
 
-If Java is installed on your machine, you can move on to the rest of the installation. 
+        git --version
 
+5. Expected output: 
+
+<img width="243" alt="Screen Shot 2022-07-23 at 1 52 07 PM" src="https://user-images.githubusercontent.com/74830912/180622591-22da7ea8-3a84-4c38-a5b7-ec9ac77577c7.png">
+
+If Maven is installed on your machine, you can move on to the rest of the installation. 
+
+## Github Cloning Method
+
+This alternate method involves cloning the github repo and creating your own .jar file.
+
+#### Windows Only
+
+1. Open a command prompt (Ctrl+R and type "cmd" and press enter OR search "cmd" in Windows search)
+
+2. Type in the following command (copy repo url or use the one here): 
+
+        git clone https://github.expedia.biz/saaday/eg-rule-manager-app
         
+3. Use the cd command to enter the clone directory. 
 
+4. Type in the following command to package the repo into a single .jar file:
+
+        mvn clean install
+        
+5. This will install all the necessary modules and package the repo into a .jar file, it may take a few minutes so give it some time. Then, type in these two commands:
+
+         cd target
+         
+         java -jar eg-rule-manager-app.jar
+         
+6. The console should display that the program has started and you may then visit the following in a browser:
+
+          localhost:8080
+          
+If the installation was done correctly, the application should be working and two new directories should have been created in the working directory. 
+
+#### MacOS Only
+
+1. Open a terminal (Ctrl+Spacebar and type "terminal" and press enter)
+
+2. Type in the following command (copy repo url or use the one here): 
+
+        git clone https://github.expedia.biz/saaday/eg-rule-manager-app
+        
+3. Use the cd command to enter the clone directory. 
+
+4. Type in the following command to package the repo into a single .jar file:
+
+        mvn clean install
+        
+5. This will install all the necessary modules and package the repo into a .jar file, it may take a few minutes so give it some time. Then, type in these two commands:
+
+         cd target
+         
+         java -jar eg-rule-manager-app.jar
+         
+6. The console should display that the program has started and you may then visit the following in a browser:
+
+          localhost:8080
+          
+If the installation was done correctly, the application should be working and two new directories should have been created in the working directory. 
 
 
 
