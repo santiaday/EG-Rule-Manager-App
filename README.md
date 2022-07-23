@@ -4,8 +4,9 @@
 <br />
 <div align="center">
   
+![egLogo](https://user-images.githubusercontent.com/74830912/180623661-ac34b7a5-73d8-4c26-9019-64ec16da8efc.jpg)
 
-![egLogo](https://media.github.expedia.biz/user/24615/files/155adf93-8d7e-498b-bf10-b63e31731d4d)
+
 
 <h3 align="center">Rule Manager / Generator</h3>
 
