@@ -18,14 +18,14 @@ import java.util.TimerTask;
 
 class Helper extends TimerTask {
 	public void run() {
-		File dir = new File(System.getProperty("user.dir") + File.separator + "springBootUploads");
+		File dir = new File(System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads");
 		File[] directoryListing = dir.listFiles();
 		if (directoryListing != null) {
 			for (File child : directoryListing) {
 				long lastModified = child.lastModified();
 				long epochTime = System.currentTimeMillis();
 				if((epochTime - lastModified) > 600000){
-					Path path = Paths.get(String.format(System.getProperty("user.dir") + File.separator + "springBootUploads" + File.separator + "%s", child.getName()));
+					Path path = Paths.get(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads" + System.getProperty("file.separator") + "%s", child.getName()));
 					try {
 						Files.delete(path);
 					} catch (IOException e) {
@@ -48,14 +48,16 @@ class Helper extends TimerTask {
 public class Excel2JsonApplication {
 	public static void main(String[] args) throws Exception {
 
-		String path = System.getProperty("user.dir") + File.separator + "rulesStorage" + File.separator;
+		String path = System.getProperty("user.dir") + System.getProperty("file.separator") + "rulesStorage" + System.getProperty("file.separator");
 		File pathAsFile = new File(path);
 
 		if (!Files.exists(Paths.get(path))) {
 			pathAsFile.mkdir();
 		}
 
-		String path2 = System.getProperty("user.dir") + File.separator + "springBootUploads" + File.separator;
+		System.out.println(System.getProperty("file.separator"));
+
+		String path2 = System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads" + System.getProperty("file.separator");
 		File path2AsFile = new File(path);
 
 		if (!Files.exists(Paths.get(path2))) {

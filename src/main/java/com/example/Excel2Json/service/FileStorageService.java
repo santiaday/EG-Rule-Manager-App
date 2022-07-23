@@ -25,7 +25,7 @@ public class FileStorageService {
 
     @Autowired
     public FileStorageService(FileStorageProperties fileStorageProperties) {
-        this.fileStorageLocation = Paths.get(System.getProperty("user.dir") + File.separator + "springBootUploads")
+        this.fileStorageLocation = Paths.get(System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads")
                 .toAbsolutePath().normalize();
 
         try {
@@ -74,7 +74,7 @@ public class FileStorageService {
 
     public Resource loadRuleAsResource(String fileName) {
         try {
-            Path filePath = Paths.get(System.getProperty("user.dir") + File.separator + "rulesStorage" + File.separator +  fileName);
+            Path filePath = Paths.get(System.getProperty("user.dir") + System.getProperty("file.separator") + "rulesStorage" + System.getProperty("file.separator") +  fileName);
             Resource resource = new UrlResource(filePath.toUri());
             if(resource.exists()) {
                 System.out.println("File found");
@@ -90,7 +90,7 @@ public class FileStorageService {
 
     public Resource loadExcelAsResource(String fileName) {
         try {
-            Path filePath = Paths.get(System.getProperty("user.dir") + File.separator + fileName);
+            Path filePath = Paths.get(System.getProperty("user.dir") + System.getProperty("file.separator") + fileName);
             System.out.println(filePath);
             Resource resource = new UrlResource(filePath.toUri());
             if(resource.exists()) {

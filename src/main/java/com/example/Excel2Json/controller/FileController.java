@@ -40,11 +40,6 @@ public class FileController {
 
     private static final Logger logger = LoggerFactory.getLogger(FileController.class);
 
-    @RequestMapping(value={"/generator", "/settings", "/signup" })
-    public String HomePage() {
-        return "index";
-    }
-
     @Autowired
     public FileStorageService fileStorageService;
 
@@ -127,6 +122,8 @@ public class FileController {
             contentType = "application/octet-stream";
         }
 
+        System.out.println("attachment; filename=\"" + resource.getFilename() + "\"");
+
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(contentType))
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
@@ -151,6 +148,8 @@ public class FileController {
         if (contentType == null) {
             contentType = "application/octet-stream";
         }
+
+        System.out.println("attachment; filename=\"" + resource.getFilename() + "\"");
 
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(contentType))
@@ -292,11 +291,11 @@ public class FileController {
 
                 int jIndex = 0;
 
-                Path path = Paths.get(String.format(System.getProperty("user.dir") + File.separator + "rulesStorage" + File.separator +  "%s.json", ruleName));
+                Path path = Paths.get(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "rulesStorage" + System.getProperty("file.separator") +  "%s.json", ruleName));
                 boolean exists = Files.exists(path);
                 if (!exists) {
                     write_to_excel_spreadsheet(jsonObject, true);
-                    FileWriter file = new FileWriter(System.getProperty("user.dir") + File.separator + "rulesStorage" + File.separator + ruleName + ".json");
+                    FileWriter file = new FileWriter(System.getProperty("user.dir") + System.getProperty("file.separator") + "rulesStorage" + System.getProperty("file.separator") + ruleName + ".json");
                     file.write(gson.toJson(jsonObject));
                     file.close();
                 } else {
@@ -305,7 +304,7 @@ public class FileController {
                         JsonObject temp = new JsonObject();
                         temp = jsonObject;
                         write_to_excel_spreadsheet(jsonObject, false);
-                        FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + File.separator + "rulesStorage"  + File.separator + "%s.json", ruleName));
+                        FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "rulesStorage"  + System.getProperty("file.separator") + "%s.json", ruleName));
                         file.write(gson.toJson(temp));
                         file.close();
                     } else {
@@ -324,7 +323,7 @@ public class FileController {
     @GetMapping("api/rules/countRules")
     public List<String> countRules(){
 
-        File dir = new File(String.format(System.getProperty("user.dir") + File.separator + "rulesStorage"));
+        File dir = new File(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "rulesStorage"));
         File[] directoryListing = dir.listFiles();
 
         List<String> ruleNames = new ArrayList<>();
@@ -476,7 +475,7 @@ public class FileController {
     public void write_to_excel_spreadsheet(JsonObject jsonObject, boolean newRule){
 
         try{
-            FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + File.separator + "master_rules.xlsx");
+            FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + System.getProperty("file.separator") + "master_rules.xlsx");
             XSSFWorkbook workBook = new XSSFWorkbook(fis);
             fis.close();
             XSSFSheet worksheet = workBook.getSheetAt(0);
@@ -823,7 +822,7 @@ public class FileController {
 
 
 
-        File dir = new File(System.getProperty("user.dir") + File.separator + "rulesStorage");
+        File dir = new File(System.getProperty("user.dir") + System.getProperty("file.separator") + "rulesStorage");
         File[] directoryListing = dir.listFiles();
         if (directoryListing != null) {
             for (File child : directoryListing) {
@@ -841,7 +840,7 @@ public class FileController {
                     System.out.println(childName);
                     System.out.println(ruleName);
 
-                    Path path = Paths.get(String.format(System.getProperty("user.dir") + File.separator + "rulesStorage" + File.separator + "%s", child.getName()));
+                    Path path = Paths.get(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "rulesStorage" + System.getProperty("file.separator") + "%s", child.getName()));
                     try {
                         Files.delete(path);
                     } catch (IOException e) {
@@ -854,7 +853,7 @@ public class FileController {
         }
 
         try {
-            FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + File.separator + "master_rules.xlsx");
+            FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + System.getProperty("file.separator") + "master_rules.xlsx");
             XSSFWorkbook workBook = new XSSFWorkbook(fis);
             fis.close();
             XSSFSheet worksheet = workBook.getSheetAt(0);
@@ -884,7 +883,7 @@ public class FileController {
                 tempWorksheet.shiftRows(rowInt+2 , tempWorksheet.getLastRowNum() , -3);
             }
 
-            FileOutputStream out = new FileOutputStream(new File(System.getProperty("user.dir") + File.separator + "master_rules.xlsx"));
+            FileOutputStream out = new FileOutputStream(new File(System.getProperty("user.dir") + System.getProperty("file.separator") + "master_rules.xlsx"));
             workBook.write(out);
             out.close();
 
@@ -899,7 +898,7 @@ public class FileController {
     public void EG_write_to_JSON(List<JsonObject> dataList, String name, String fileKey, int counter) {
         Gson gson = new Gson();
         try {
-            FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + File.separator + "springBootUploads" + File.separator + "%s.json",
+            FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads" + System.getProperty("file.separator") + "%s.json",
                     multiple ? fileKey + "converted-" + name + "-" + counter : fileKey + "converted-" + name));
             file.write(gson.toJson(dataList));
             file.close();
@@ -918,7 +917,7 @@ public class FileController {
         try {
 
 
-            FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + File.separator + "springBootUploads" + File.separator + "%s.json",
+            FileWriter file = new FileWriter(String.format(System.getProperty("user.dir") + System.getProperty("file.separator") + "springBootUploads" + System.getProperty("file.separator") + "%s.json",
                     multiple ? fileKey + "converted-" + name + "-" + counter : fileKey + "converted-" + name));
             file.write(gson.toJson(dataList));
             file.close();
