@@ -76,9 +76,9 @@ The purpose of this section is to give detailed instructions on how to install a
 
 ##### In order to run this application on your machine, you must have Java installed. 
 
-###How To Check If Java Is Installed
+### How To Check If Java Is Installed
 
-####Windows: 
+#### Windows: 
 
 1. Open a command prompt (Ctrl+R and type "cmd" and press enter OR search "cmd" in Windows search)
 
@@ -92,7 +92,7 @@ The purpose of this section is to give detailed instructions on how to install a
 
 If no version is detected, you will have to install Java before running the application. 
 
-####MacOS: 
+#### MacOS: 
 
 1. Open a terminal (Ctrl+Spacebar and type "terminal" and press enter)
 
@@ -115,7 +115,7 @@ If Java is installed on your machine, you can move on to the rest of the install
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-###Getting .jar File
+### Getting .jar File
 
 1. Visit this link:
 
@@ -128,7 +128,7 @@ https://drive.google.com/drive/folders/1zt9epSeoQhqLiSXme2MBooYUUXSMxkVC?usp=sha
 
 ####NOTE: Running the application is going to create two new directories in the current working directory: "rulesStorage" and "uploadedFiles". These are necessary for ####the application to work properly. It is vital that they remain in the same directory as the .jar file in order for the application to work correctly. If the application is started incorrectly and these directories are not created, it is advised that they be correctly created with these names in the correct directory.
 
-###Windows Only
+### Windows Only
 
 1. Once the file is downloaded and in the directory, you may double-click it to start it. If you are developing the application and would like to see stack traces or debugging information, do the following instead:
 
@@ -156,7 +156,7 @@ Alternatively, you can open a task manager (Ctrl+Alt+Del and "Task Manager") and
         
 Click on this process and click "End Task"
 
-###MacOS Only
+### MacOS Only
 
 ####NOTE: Due to MacOs permissions, the process is slighltly more complicated than Windows, but if done correctly, will work fine. 
 
@@ -186,7 +186,7 @@ Click on this process and click "End Task"
         
 5. To terminate the program, open a new activity monitor and, in the upper right corner, type in "java". Then, you may delete the shown items. Deleting these items will terminate the application and clear the port for future use.  
          
-##Alternate Installation Instructions
+## Alternate Installation Instructions
 
 If the location of the .jar file is corrupt or you don't have access to it, follow these instructions to create your own .jar file.
 
