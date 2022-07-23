@@ -124,7 +124,7 @@ https://drive.google.com/drive/folders/1zt9epSeoQhqLiSXme2MBooYUUXSMxkVC?usp=sha
 
 2 Download the .jar file. (If prompted for viruses, click to download anyway. This is an enterprise Github so only Expedia employees have access to this link. After termination of internship, location may change, depending on the future owner of the repo).
 
-3. **DO NOT**double-click as this would start the program but will not grant the sufficient permissions that are needed for the program to work properly. Instead, click "Show In Folder" on Windows or "Show In Finder" for MacOS.
+**DO NOT**double-click as this would start the program but will not grant the sufficient permissions that are needed for the program to work properly. Instead, click "Show In Folder" on Windows or "Show In Finder" for MacOS.
 
 
 #### NOTE: Running the application is going to create two new directories in the current working directory: "rulesStorage" and "uploadedFiles". These are necessary for the application to work properly. It is vital that they remain in the same directory as the .jar file in order for the application to work correctly. If the application is started incorrectly and these directories are not created, it is advised that they be correctly created with these names in the correct directory.
@@ -305,7 +305,7 @@ If the installation was done correctly, the application should be working and tw
 
 ### Converter
   
-  ![converter](https://media.github.expedia.biz/user/24615/files/2b75bd52-3d7b-476a-8ad7-58c1666e2621)
+![converter](https://user-images.githubusercontent.com/74830912/180623709-0df1747b-763f-402d-a1ec-429ab7176cd5.PNG)
 
 
 The converter aspect of the application works to convert Excel files into .json files. When a regular excel file is uploaded, the program will read it as plaintext and convert it to a single-level json file. 
@@ -319,7 +319,7 @@ Note that the default setting is set to create one large json file from the exce
 
 ### Manager
 
-![manager](https://media.github.expedia.biz/user/24615/files/e05b906a-e7cb-4327-835e-d405aa85e6e2)
+![manager](https://user-images.githubusercontent.com/74830912/180623708-d3f42844-5794-437f-b06b-33507972e4fb.PNG)
 
 
 The rule manager allows users to see their created rules and gives users the options to delete or download them. Please not that, as of now (07/20/2022), there is no central storage system in place and the project is not published. This means that this feature is contingent on the user choosing a local path. One alternative would be to use a github repo as a temporary storage system but, since the person creating the project is an intern, their account may be inaccessible in the future.
@@ -328,7 +328,7 @@ From the manager page, you can also download the master_rules excel file which i
 
 ### Generator
 
-![generator](https://media.github.expedia.biz/user/24615/files/7e7b12e3-68bb-48b4-94f6-e6131431dfb0)
+![generator](https://user-images.githubusercontent.com/74830912/180623705-3f0b8273-58f3-4e50-8234-26ac2ddfa0c6.PNG)
 
   
  The rule generator allows users to create rules from scratch or from an existing rule. If creating from scratch, the user must choose which fields should be added. Note that depending on which field is added, the next field that can be added may vary. (ex. an object may not be pushed into a string array). 
@@ -341,7 +341,8 @@ From the manager page, you can also download the master_rules excel file which i
  
  ### Example
  
- ![exampleRule](https://media.github.expedia.biz/user/24615/files/8039d6d6-2138-4906-964b-7a71d3baafc4)
+![exampleRule](https://user-images.githubusercontent.com/74830912/180623694-aa808a02-51ba-4114-bee6-330a6276c004.PNG)
+
 
   
   Note that each object has corresponding brackets with the same color to help the user identify where they are adding/removing fields. 
