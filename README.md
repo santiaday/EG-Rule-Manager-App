@@ -70,7 +70,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-The purpose of this section is to give detailed instructions on how to install and use the application. 
+The purpose of this section is to give detailed instructions on how to install and use the application. cd tar  
 
 ## Prerequisites
 
@@ -189,6 +189,43 @@ Click on this process and click "End Task"
 ## Alternate Installation Instructions
 
 If the location of the .jar file is corrupt or you don't have access to it, follow these instructions to create your own .jar file.
+
+###Prerequisites
+
+In order to create your own .jar file and follow along with these installation instructions, you must have Maven installed on your machine. Follow these steps to check if you have Maven installed. 
+
+#### Windows: 
+
+1. Open a command prompt (Ctrl+R and type "cmd" and press enter OR search "cmd" in Windows search)
+
+2. Type in this command:
+
+        mvn -version
+
+3. Expected output:
+
+![mavenVersion](https://user-images.githubusercontent.com/74830912/180586303-a69aaa4a-d637-4c12-94d1-19e591a19dd7.JPG)
+
+If no version is detected, you will have to install Maven before running the application. 
+
+#### MacOS: 
+
+1. Open a terminal (Ctrl+Spacebar and type "terminal" and press enter)
+
+2. Type in this command:
+
+        mvn -version
+
+3. Expected output:
+
+
+
+If no version is detected, you will have to install Java before running the application. 
+
+
+If Java is installed on your machine, you can move on to the rest of the installation. 
+
+        
 
 
 
