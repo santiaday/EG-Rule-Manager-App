@@ -74,7 +74,6 @@ The purpose of this section is to give detailed instructions on how to install a
 
 ## Prerequisites
 
-##### This only applies if user does not have .jar file. Instructions on starting the .jar file will be provided below. 
 ##### In order to run this application on your machine, you must have Java installed. 
 
 ###How To Check If Java Is Installed
@@ -85,11 +84,11 @@ The purpose of this section is to give detailed instructions on how to install a
 
 2. Type in this command:
 
-java -version
+        java -version
 
 3. Expected output:
 
-<img width="526" alt="Screen Shot 2022-07-22 at 6 02 03 PM" src="https://user-images.githubusercontent.com/74830912/180584659-49795c61-2b13-4aa0-b66a-1a206c9c0fad.png">
+![javaVersion](https://user-images.githubusercontent.com/74830912/180585198-c5ca58aa-12ca-441c-bf0c-a98cbb2eff00.JPG)
 
 If no version is detected, you will have to install Java before running the application. 
 
@@ -99,7 +98,7 @@ If no version is detected, you will have to install Java before running the appl
 
 2. Type in this command:
 
-java -version
+        java -version
 
 3. Expected output:
 
@@ -126,21 +125,71 @@ https://drive.google.com/drive/folders/1zt9epSeoQhqLiSXme2MBooYUUXSMxkVC?usp=sha
 
 3. ##DO NOT## double-click as this would start the program but will not grant the sufficient permissions that are needed for the program to work properly. Instead, click "Show In Folder" on Windows or "Show In Finder" for MacOS.
 
-###Windows Only
 
-####NOTE: Running the application is going to create two new directories in the current working directory: "rulesStorage" and "uploadedFiles". These are necessary for the application to work properly. It is vital that they remain in the same directory as the .jar file in order for the application to work correctly.
+####NOTE: Running the application is going to create two new directories in the current working directory: "rulesStorage" and "uploadedFiles". These are necessary for ####the application to work properly. It is vital that they remain in the same directory as the .jar file in order for the application to work correctly. If the application is started incorrectly and these directories are not created, it is advised that they be correctly created with these names in the correct directory.
+
+###Windows Only
 
 1. Once the file is downloaded and in the directory, you may double-click it to start it. If you are developing the application and would like to see stack traces or debugging information, do the following instead:
 
-          1. Open a command prompt (Ctrl+R and type "cmd" and press enter OR search "cmd" in Windows search)
-          2. Use the "cd" command to find the directory where the application .jar file is located. 
-          3. Run the following command: 
+        1. Open a command prompt (Ctrl+R and type "cmd" and press enter OR search "cmd" in Windows search)
+        2. Use the "cd" command to find the directory where the application .jar file is located. 
+        3. Run the following command: 
               
-              java -jar eg-manager-app.jar
+            java -jar eg-manager-app.jar
               
-          4. The application will be started and the command prompt will display any errors that are present. 
+        4. The application will be started and the command prompt will display any errors that are present. 
+
+2. If the application was started correcty, two new directories ("rulesStorage" and "uploadedFiles") should have been created. The rulesStorage directory will contain all the created rules and the uploadedFiles will contain all the files that have been converted (this directory is emptied out every ~5 minutes to conserve space).
+
+3. Once the application has been started, open a browser of your choice (preferably Chrome, but any will work) and type the following in the address bar: 
+
+        localhost:8080
+        
+4. To terminate the program, open a new command prompt (Ctrl+R and type "cmd" and press enter OR search "cmd" in Windows search) and type the following command: 
          
+         taskkill /f /im javaw.exe
+  
+Alternatively, you can open a task manager (Ctrl+Alt+Del and "Task Manager") and search for a process that says:
+
+        Java(TM) Platform SE binary
+        
+Click on this process and click "End Task"
+
+###MacOS Only
+
+####NOTE: Due to MacOs permissions, the process is slighltly more complicated than Windows, but if done correctly, will work fine. 
+
+1. Once the file is downloaded and in the directory, DO NOT double click it. Instead, open a terminal (Ctrl+Spacebar and type "terminal" and press enter) and use the cd command to go to the directory where the .jar file is stored. For example:
+
+        If the .jar file is stored in the "test" folder that is located in the "Documents" directory, you would do the following:
+        
+                cd Documents/test
+        
+        After pressing enter, you will be in the directory: Documents/test. To make sure it is the correct directory, type "ls" and make sure that one of the files             shown is the .jar file
+
+2. If you are in the correct directory, you can run this command to start the application:
+
+        java -jar eg-manager-app.jar
+        
+3. If you are prompted with an error sign that says that the application cannot be opened because it is from an untrusted developer, do the following: 
+
+        Open System Preferences
+        Navigate to "Security & Privacy"
+        There should be a message at the bottom that says that the application was blocked. Click on "Open Anyway".
+
+3. Once the application has been started, open a browser of your choice (preferably Chrome, but any will work) and type the following in the address bar: 
+
+        localhost:8080
+        
+4. If the application was started correcty, two new directories ("rulesStorage" and "uploadedFiles") should have been created. The rulesStorage directory will contain all the created rules and the uploadedFiles will contain all the files that have been converted (this directory is emptied out every ~5 minutes to conserve space).
+        
+5. To terminate the program, open a new activity monitor and, in the upper right corner, type in "java". Then, you may delete the shown items. Deleting these items will terminate the application and clear the port for future use.  
          
+##Alternate Installation Instructions
+
+If the location of the .jar file is corrupt or you don't have access to it, follow these instructions to create your own .jar file.
+
 
 
 
