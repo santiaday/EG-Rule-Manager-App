@@ -72,15 +72,75 @@
 
 The purpose of this section is to give detailed instructions on how to install and use the application. 
 
-### Prerequisites
+## Prerequisites
 
-##### This only applies if user does not have .jar file. Instructions on starting the .jar file will be provided below
+##### This only applies if user does not have .jar file. Instructions on starting the .jar file will be provided below. 
+##### In order to run this application on your machine, you must have Java installed. 
+
+###How To Check If Java Is Installed
+
+####Windows: 
+
+1. Open a command prompt (Ctrl+R and type "cmd" and press enter OR search "cmd" in Windows search)
+
+2. Type in this command:
+
+java -version
+
+3. Expected output:
+
+<img width="526" alt="Screen Shot 2022-07-22 at 6 02 03 PM" src="https://user-images.githubusercontent.com/74830912/180584659-49795c61-2b13-4aa0-b66a-1a206c9c0fad.png">
+
+If no version is detected, you will have to install Java before running the application. 
+
+####MacOS: 
+
+1. Open a terminal (Ctrl+Spacebar and type "terminal" and press enter)
+
+2. Type in this command:
+
+java -version
+
+3. Expected output:
+
+<img width="526" alt="Screen Shot 2022-07-22 at 6 02 03 PM" src="https://user-images.githubusercontent.com/74830912/180584729-c07a0db4-18e6-4e07-8ca8-4fde0f26136e.png">
+
+If no version is detected, you will have to install Java before running the application. 
+
+
+If Java is installed on your machine, you can move on to the rest of the installation. 
 
 
 
-### Installation
+## Installation
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+###Getting .jar File
+
+1. Visit this link:
+
+https://drive.google.com/drive/folders/1zt9epSeoQhqLiSXme2MBooYUUXSMxkVC?usp=sharing
+
+2 Download the .jar file. (If prompted for viruses, click to download anyway. This is an enterprise Github so only Expedia employees have access to this link. After termination of internship, location may change, depending on the future owner of the repo).
+
+3. ##DO NOT## double-click as this would start the program but will not grant the sufficient permissions that are needed for the program to work properly. Instead, click "Show In Folder" on Windows or "Show In Finder" for MacOS.
+
+###Windows Only
+
+####NOTE: Running the application is going to create two new directories in the current working directory: "rulesStorage" and "uploadedFiles". These are necessary for the application to work properly. It is vital that they remain in the same directory as the .jar file in order for the application to work correctly.
+
+1. Once the file is downloaded and in the directory, you may double-click it to start it. If you are developing the application and would like to see stack traces or debugging information, do the following instead:
+
+          1. Open a command prompt (Ctrl+R and type "cmd" and press enter OR search "cmd" in Windows search)
+          2. Use the "cd" command to find the directory where the application .jar file is located. 
+          3. Run the following command: 
+              
+              java -jar eg-manager-app.jar
+              
+          4. The application will be started and the command prompt will display any errors that are present. 
+         
+         
 
 
 
