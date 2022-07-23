@@ -123,7 +123,7 @@ https://drive.google.com/drive/folders/1zt9epSeoQhqLiSXme2MBooYUUXSMxkVC?usp=sha
 
 2 Download the .jar file. (If prompted for viruses, click to download anyway. This is an enterprise Github so only Expedia employees have access to this link. After termination of internship, location may change, depending on the future owner of the repo).
 
-3. ## DO NOT ## double-click as this would start the program but will not grant the sufficient permissions that are needed for the program to work properly. Instead, click "Show In Folder" on Windows or "Show In Finder" for MacOS.
+3. **DO NOT**double-click as this would start the program but will not grant the sufficient permissions that are needed for the program to work properly. Instead, click "Show In Folder" on Windows or "Show In Finder" for MacOS.
 
 
 #### NOTE: Running the application is going to create two new directories in the current working directory: "rulesStorage" and "uploadedFiles". These are necessary for the application to work properly. It is vital that they remain in the same directory as the .jar file in order for the application to work correctly. If the application is started incorrectly and these directories are not created, it is advised that they be correctly created with these names in the correct directory.
