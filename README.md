@@ -126,7 +126,7 @@ https://drive.google.com/drive/folders/1zt9epSeoQhqLiSXme2MBooYUUXSMxkVC?usp=sha
 3. ##DO NOT## double-click as this would start the program but will not grant the sufficient permissions that are needed for the program to work properly. Instead, click "Show In Folder" on Windows or "Show In Finder" for MacOS.
 
 
-####NOTE: Running the application is going to create two new directories in the current working directory: "rulesStorage" and "uploadedFiles". These are necessary for ####the application to work properly. It is vital that they remain in the same directory as the .jar file in order for the application to work correctly. If the application is started incorrectly and these directories are not created, it is advised that they be correctly created with these names in the correct directory.
+#### NOTE: Running the application is going to create two new directories in the current working directory: "rulesStorage" and "uploadedFiles". These are necessary for ####the application to work properly. It is vital that they remain in the same directory as the .jar file in order for the application to work correctly. If the application is started incorrectly and these directories are not created, it is advised that they be correctly created with these names in the correct directory.
 
 ### Windows Only
 
@@ -158,7 +158,7 @@ Click on this process and click "End Task"
 
 ### MacOS Only
 
-####NOTE: Due to MacOs permissions, the process is slighltly more complicated than Windows, but if done correctly, will work fine. 
+#### NOTE: Due to MacOs permissions, the process is slighltly more complicated than Windows, but if done correctly, will work fine. 
 
 1. Once the file is downloaded and in the directory, DO NOT double click it. Instead, open a terminal (Ctrl+Spacebar and type "terminal" and press enter) and use the cd command to go to the directory where the .jar file is stored. For example:
 
@@ -190,7 +190,7 @@ Click on this process and click "End Task"
 
 If the location of the .jar file is corrupt or you don't have access to it, follow these instructions to create your own .jar file.
 
-###Prerequisites
+### Prerequisites
 
 In order to create your own .jar file and follow along with these installation instructions, you must have Maven installed on your machine. Follow these steps to check if you have Maven installed. You must also have Git installed on your machine. 
 
